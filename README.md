@@ -63,7 +63,7 @@ CGPA = (Previous CGPA * Previous Total Units + Current GPA * Current Total Units
 
 To use this project online:
 
-1. visit:
+1. visit: [cgpa-calculator-snowy-one.vercel.app](https://cgpa-calculator-snowy-one.vercel.app/)
 
 To use this project locally:
 
