@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-5">
+      <h1 class="text-3xl font-bold text-center mb-3">CGPA Calculator</h1>
+      <h2 class="text-xl font-medium text-center mb-6">
+        You have had a hard time calculating your CGPA?
+      </h2>
+
+      <!-- Previous CGPA Details -->
+      <div class="mb-6 bg-white p-4 rounded shadow">
+        <h2 class="text-lg font-semibold mb-2">Previous CGPA Details</h2>
+        <div class="grid grid-cols-2 gap-4">
+          <input
+            type="number"
+            placeholder="Previous CGPA"
+            id="prevCgpa"
+            class="border p-2 rounded w-full"
+          />
+          <input
+            type="number"
+            placeholder="Total Previous Units"
+            id="prevUnits"
+            class="border p-2 rounded w-full"
+          />
+        </div>
+      </div>
+
+      <!-- Current Semester Scores -->
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="text-lg font-semibold mb-4">Current Semester Scores</h2>
+        <div class="grid grid-cols-3 gap-4 mb-4">
+          <input
+            type="text"
+            placeholder="Course Name"
+            id="courseName"
+            class="border p-2 rounded w-full"
+          />
+          <input
+            type="number"
+            placeholder="Course Units"
+            id="courseUnits"
+            class="border p-2 rounded w-full"
+          />
+          <select id="grade" class="border p-2 rounded w-full">
+            <option value="5">A</option>
+            <option value="4">B</option>
+            <option value="3">C</option>
+            <option value="2">D</option>
+            <option value="0">F</option>
+          </select>
+        </div>
+        <button class="bg-blue-500 text-white py-2 px-4 rounded" id="addCourse">
+          Add Course
+        </button>
+      </div>
+
+      <!-- Course List -->
+      <div id="courseList" class="mt-6 bg-white p-4 rounded shadow">
+        <h2 class="text-lg font-semibold mb-2">Courses Added</h2>
+        <ul id="courseItems" class="list-disc pl-5 text-sm"></ul>
+      </div>
+
+      <!-- Results -->
+      <div class="mt-6 text-center">
+        <h3 class="text-xl font-bold">New CGPA:</h3>
+        <div id="cgpaResult" class="text-4xl text-blue-500 font-semibold mt-2">
+          0.00
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
