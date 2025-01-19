@@ -1,11 +1,21 @@
 let courses = [];
 document.getElementById("addCourse").addEventListener("click", () => {
-  const courseName = document.getElementById("courseName").value;
-  const courseUnits = parseInt(document.getElementById("courseUnits").value);
-  const grade = parseInt(document.getElementById("grade").value);
+  let courseNameElement = document.getElementById("courseName");
+  let courseUnitsElement = document.getElementById("courseUnits");
+  let gradeElement = document.getElementById("grade");
+
+  let courseName = courseNameElement.value;
+  let courseUnits = parseInt(courseUnitsElement.value);
+  let grade = parseInt(gradeElement.value);
 
   if (courseName && courseUnits && grade !== null) {
     courses.push({ courseName, courseUnits, grade });
+
+    // Clear the form inputs
+    courseNameElement.value = "";
+    courseUnitsElement.value = "";
+    gradeElement.value = "";
+
     displayCourses();
     calculateCGPA();
   }
